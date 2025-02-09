@@ -9,7 +9,7 @@ if not token:
     raise ValueError("TOKEN environment variable not set")
 
 intents = discord.Intents.default()
-intents.message_contents = True
+intents.messages = True 
 client = discord.Client(intents=intents)
 
 @client.event
