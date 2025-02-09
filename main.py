@@ -1,8 +1,12 @@
 import discord
 import random
 from verbs import verb_check
+import os
 
-token = 'YOUR TOKEN HERE'
+token = os.environ.get('TOKEN')
+
+if not token:
+    raise ValueError("TOKEN environment variable not set")
 
 intents = discord.Intents.default()
 intents.message_contents = True

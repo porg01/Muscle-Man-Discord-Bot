@@ -1,0 +1,7 @@
+services:
+  muscle-man-discord-bot:
+    container_name: muscle-man-discord-bot
+    build: .
+    environment:
+      - TOKEN=
+    restart: unless-stopped
